@@ -65,7 +65,7 @@ const Puzzle = () => {
           }
         }}
       />
-      <ScrollView>
+      <ScrollView height="50%">
         <Questions questions={puzzle.questions} />
       </ScrollView>
     </>

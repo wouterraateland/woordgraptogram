@@ -8,7 +8,7 @@ import usePuzzleContext from "../hooks/usePuzzleContext";
 const Wrapper = styled.View`
   flex: 1;
   min-height: 32px;
-  padding: 16px;
+  padding: 16px 0;
 
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -17,7 +17,7 @@ const Wrapper = styled.View`
 `;
 
 const Question = styled.View`
-  padding: 4px 0;
+  padding: 4px 16px;
   background-color: ${props => (props.isFocused ? "#fff59d" : "#fff")};
 `;
 
@@ -27,6 +27,7 @@ const Strong = styled.Text`
 
 const Questions = ({ questions }) => {
   const { cursor } = usePuzzleContext();
+
   return (
     <Wrapper pointerEvents="none">
       {questions.map((q, i) => (
